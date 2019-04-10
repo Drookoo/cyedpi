@@ -1,9 +1,11 @@
 #git clone https://github.com/Drookoo/cyedpi
 
+
+sudo apt update && sudo apt upgrade -y 
+
 # to use ifconfig 
 sudo apt install net-tools -y
-sudo apt install tightvncserver -y
-sudo apt install openssh-server -y
+sudo apt install nmap -y --fix-missing
 
 #change passwd 
 passwd lubuntu 
@@ -11,21 +13,11 @@ passwd lubuntu
 #lubuntu1
 #lubuntu1
 
-#configure 
-vncserver 
-#password "lubuntu", no view only password 
-
-#check tightvnc is running on 5901 
-netstat -tulpa 
-
-#check ssh is running 
-sudo systemctl status ssh 
-
 #install RealVNC viewer, download its .deb 
-#cd Downloads 
-#dpkg -i .....
+wget https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.19.325-Linux-x64.deb
+cd /Downloads/
+dpkg -i 
 
 #Run
-vncconnect [address:port] 
 vncviewer 
 #provide address:port 
